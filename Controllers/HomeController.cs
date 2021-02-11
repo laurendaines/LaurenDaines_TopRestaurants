@@ -18,6 +18,7 @@ namespace LaurenDaines_TopRestaurants.Controllers
             _logger = logger;
         }
 
+
         public IActionResult Index()
         {
             List<string> restaurantList = new List<string>();
