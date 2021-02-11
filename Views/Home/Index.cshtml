@@ -1,0 +1,16 @@
+﻿@{
+}
+@model IEnumerable<string>
+
+<div class="text-center">
+    <h1 class="display-4">Top Resturaunts in Provo</h1>
+    <p>These are a few of my all time favorite restaurants!</p>
+</div>
+
+<!--list to view my top 5 restaurant recommendations-->
+<ul>
+    @foreach (string r in Model)
+    {
+        <li>@Html.Raw(r)</li>
+    }
+</ul>

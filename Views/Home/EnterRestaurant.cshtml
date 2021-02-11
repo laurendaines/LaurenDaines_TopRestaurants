@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+}
+
+@model LaurenDaines_TopRestaurants.Models.ApplicationResponse
+<!--title-->
+<div class="text-center">
+    <h1 class="display-4">@ViewBag.Title</h1>
+</div>
+
+<br />
+
+<!--form to input restaurant-->
+<form method="post" asp-action="EnterRestaurant">
+    <div asp-validation-summary="All"></div>
+
+    <table id="movies">
+
+        <tr>
+            <th><label asp-for="Rank">Rank</label></th>
+            <th><label asp-for="Name">Name</label></th>
+            <th><label asp-for="Address">Address</label></th>
+            <th><label asp-for="PhoneNumber">Phone Number</label></th>
+            <th><label asp-for="Link">Link</label></th>
+            <th><label asp-for="FavDish">Favorite Dish</label></th>
+        </tr>
+
+        <tr>
+            <td><input type="text" id="rank" asp-for="Rank" size=10 value="" /></td>
+            <td><input type="text" id="name" asp-for="Name" size=10 value="" /></td>
+            <td><input type="text" id="address" asp-for="Address" size=10 value="" /></td>
+            <td><input type="text" id="phonenumber" asp-for="PhoneNumber" size=10 value="" /></td>
+            <td><input type="text" id="link" asp-for="Link" size=10 value="" /></td>
+            <td><input type="text" id="favdish" asp-for="FavDish" size=10 value="" /></td>
+        </tr>
+
+    </table>
+
+    <br /><br />
+
+    <!--button to submit information to storage-->
+    <button type="submit" style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" class="button" value="Submit">
+        Submit
+    </button>
+
+</form>
